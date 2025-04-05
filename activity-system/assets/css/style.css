@@ -1,0 +1,36 @@
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.alert {
+    border-radius: 5px;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
