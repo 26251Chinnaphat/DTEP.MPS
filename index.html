@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DTEP - Digital Technology Excellence Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- AOS CSS สำหรับเอฟเฟกต์การเลื่อน -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Kanit', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background: rgba(107, 107, 107, 0.8);
+        box-shadow: var(--neon-shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo h1 {
+        color: #28a745;
+        text-shadow: var(--neon-shadow);
+    }
+    /* Navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary-color);
+        text-shadow: var(--neon-shadow);
+    }
+    .cta {
+      background-color: #33CC66;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .cta:hover {
+      background-color: #28a745;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeInDown 1s ease-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .hero .btn {
+      background-color: #33CC66;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .hero .btn:hover {
+      background-color: #28a745;
+    }
+    /* Section Styles */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #fff;
+      margin: 20px 0;
+    }
+    section h2 {
+      margin-bottom: 20px;
+      color: #33CC66;
+    }
+    section p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.8;
+    }
+    /* Courses Section */
+    .courses-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .course-item {
+      background: #f9f9f9;
+      padding: 20px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .course-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    /* Activities Section (Gallery) */
+    .activities-section {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+    /* Contact Form (ถ้ามี) */
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #33CC66;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #28a745;
+    }
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #33CC66;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 100;
+      transition: background 0.3s;
+    }
+    #backToTop:hover {
+      background: #28a745;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .courses-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <div class="logo">
+      <a href="index.html">
+        <img src="DIGITAL TECHNOLOGY EXCELLENCE PROGRAM.png" alt="โลโก้ DTEP">
+      </a>
+      <h1>DTEP</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับ</a></li>
+        <li><a href="courses.html">หลักสูตร</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="staff.html">แนะนำบุคลากร</a></li>
+        <li><a href="student.html">สำหรับนักเรียน</a></li>
+      </ul>
+      <ul>
+        <li><a href="th">ไทย</a></li>
+        <li><a href="../us">อังกฤษ</a></li>
+        <li><a href="../cn">จีน</a></li>
+        <li><a href="../jp">ญี่ปุ่น</a></li>
+        <li><a href="../">ทิเบต</a></li>
+        <li><a href="../">ล้านนา</a></li>
+      </ul>
+    </nav>
+    <a href="http://61.7.228.141/admission/index.php?r=register" class="cta">สมัครเรียน</a>
+  </header>
+
+  <!-- announcements -->
+  <section section id="announcements">
+    <div class="img">
+      <img src="Untitled-2.2.png" width="800" height="auto">
+      <p>โปรดรอติดตามประกาศ... </p>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h2>DIGITAL TECHNOLOGY EXCELLENCE PROGRAM</h2>
+      <p>เรียนรู้เทคโนโลยี สร้างสรรค์นวัตกรรม พัฒนาสู่อนาคต</p>
+      <a href="courses.html" class="btn">ดูรายละเอียดหลักสูตร</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <h2>เกี่ยวกับโครงการ DTEP</h2>
+    <p>ห้องเรียนความเป็นเลิศด้านเทคโนโลยีดิจิทัล (Digital Technology Excellence Program : DTEP) ของโรงเรียนแม่สายประสิทธิ์ศาสตร์มุ่งเน้นการสอนและพัฒนาเทคโนโลยีที่ทันสมัย พร้อมทั้งสร้างสรรค์นวัตกรรมเพื่อเตรียมความพร้อมให้กับนักเรียนสู่อนาคต</p>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" data-aos="fade-up">
+    <h2>หลักสูตรที่เปิดสอน</h2>
+    <p>หลักสูตรด้านเทคโนโลยีต่างๆ ที่ตอบโจทย์ความต้องการในยุคดิจิทัล</p>
+    <div class="courses-list">
+      <div class="course-item" data-aos="zoom-in">
+        <h3>พัฒนาระบบฐานข้อมูล</h3>
+        <p>เรียนรู้พื้นฐานและการพัฒนาระบบฐานข้อมูล</p>
+      </div>
+      <div class="course-item" data-aos="zoom-in" data-aos-delay="100">
+        <h3>พื้นฐานการเขียนโปรแกรม</h3>
+        <p>พัฒนาทักษะการเขียนโปรแกรมและสร้างสรรค์ซอฟต์แวร์</p>
+      </div>
+      <div class="course-item" data-aos="zoom-in" data-aos-delay="200">
+        <h3>การเขียนโปรแกรมเพื่อการวิเคราะห์ข้อมูล</h3>
+        <p>ศึกษาวิธีการเขียนโปรแกรมและการวิเคราะห์ข้อมูล</p>
+      </div>
+      <div class="course-item" data-aos="zoom-in" data-aos-delay="300">
+        <h3>โครงงานเพื่อพัฒนาทักษะอาชีพทางเทคโนโลยี</h3>
+        <p>เรียนรู้การสร้างแอปพลิเคชัน หรือพัฒนาเว็บไซต์เพื่อการสื่อสารและนำเสนอ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" class="activities-section" data-aos="fade-up">
+    <h2>กิจกรรมและผลงานนักเรียน</h2>
+    <div class="gallery">
+      <div class="gallery-item" data-aos="flip-left">
+        <img src="การอบรมวิศวกรรมพื้นฐานกับการ codeing/001.jpg" alt="กิจกรรม 1">
+        <div class="caption">การอบรมวิศวกรรมพื้นฐานกับการ codeing</div>
+      </div>
+      <div class="gallery-item" data-aos="flip-right">
+        <img src="อบรมการสร้างสื่อมัลติมีเดีย/LINE_ALBUM_อบรมมัลติมีเดีย 060767_240706_20.jpg" alt="กิจกรรม 2">
+        <div class="caption">อบรมการสร้างสื่อมัลติมีเดีย</div>
+      </div>
+      <!-- เพิ่มกิจกรรมเพิ่มเติมได้ที่นี่ -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/06/images.png" width="auto" height="50">
+    <p>© 2025 โรงเรียนแม่สายประสิทธิ์ศาสตร์ | DIGITAL TECHNOLOGY EXCELLENCE PROGRAM (DTEP)</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    
+    // แสดง/ซ่อนปุ่ม Back-to-Top
+    window.addEventListener('scroll', function() {
+      var backToTop = document.getElementById('backToTop');
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    
+    // ตัวอย่างการจัดการฟอร์มติดต่อ (หากมีการเพิ่มในอนาคต)
+    if(document.getElementById('contactForm')) {
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('ขอบคุณสำหรับข้อความของคุณ! เราจะติดต่อกลับโดยเร็ว');
+        this.reset();
+      });
+    }
+  </script>
+  <script>
+    // ฟังก์ชันแสดง Popup Message
+    function showPopup() {
+      Swal.fire({
+        title: 'ยินดีต้อนรับสู่ DTEP!',
+        text: 'เรียนรู้เทคโนโลยี สร้างสรรค์นวัตกรรม พัฒนาสู่อนาคต',
+        imageUrl: 'Untitled-2.2.png', // ใส่รูปโลโก้
+        imageWidth: 100,
+        imageHeight: auto,
+        imageAlt: 'DTEP Logo',
+        background: '#f4f4f4',  // สีพื้นหลัง
+        color: '#333',  // สีตัวอักษร
+        confirmButtonText: 'เข้าสู่เว็บไซต์',
+        confirmButtonColor: '#33CC66',
+        showCancelButton: true,
+        cancelButtonText: 'ปิด',
+        cancelButtonColor: '#999',
+        animation: true
+      });
+    }
+
+    // เรียกใช้ฟังก์ชัน Popup Message อัตโนมัติเมื่อหน้าโหลด
+    window.onload = function() {
+      setTimeout(showPopup, 1000); // หน่วงเวลา 1 วินาทีหลังจากโหลดหน้าเว็บ
+    };
+  </script>
+ 
+</body>
+</html>

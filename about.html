@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เกี่ยวกับ DTEP - Digital Technology Excellence Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- AOS CSS สำหรับเอฟเฟกต์การเลื่อน -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Kanit', sans-serif;
+      line-height: 1.6;
+      background-color: #b6b6b6;
+      color: #333;
+    }
+    /* Header */
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background: rgba(107, 107, 107, 0.8);
+        box-shadow: var(--neon-shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo h1 {
+        color: #28a745;
+        text-shadow: var(--neon-shadow);
+    }
+    /* Navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary-color);
+        text-shadow: var(--neon-shadow);
+    }
+    /* About Section */
+    .about-section {
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #ffffff, #e6e6e6);
+    }
+    .about-section h2 {
+      text-align: center;
+      color: #33CC66;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .about-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1 1 500px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+    .about-text p {
+      margin-bottom: 15px;
+    }
+    .about-image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+    .about-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+    /* Optional Courses Section */
+    .courses-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .course-item {
+      background: #00000080;
+      padding: 20px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      color: #fff;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .course-item:hover {
+      transform: translateY(-5px);
+      opacity: 0.9;
+    }
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <div class="logo">
+      <a href="index.html">
+        <img src="DIGITAL TECHNOLOGY EXCELLENCE PROGRAM.png" alt="โลโก้ DTEP">
+      </a>
+      <h1>DTEP</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับ</a></li>
+        <li><a href="courses.html">หลักสูตร</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="staff.html">แนะนำบุคลากร</a></li>
+        <li><a href="student.html">สำหรับนักเรียน</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section" data-aos="fade-up">
+    <h2>เกี่ยวกับโครงการ DTEP</h2>
+    <div class="about-content">
+      <div class="about-text" data-aos="fade-right">
+        <p>
+          ห้องเรียน<strong>ความเป็นเลิศด้านเทคโนโลยีดิจิทัล (Digital Technology Excellence Program: DTEP)</strong> ของโรงเรียนแม่สายประสิทธิ์ศาสตร์ ได้ถูกจัดตั้งขึ้นเพื่อส่งเสริมและพัฒนาความรู้ด้านเทคโนโลยีดิจิทัลให้กับนักเรียนในยุคที่เทคโนโลยีก้าวกระโดดอย่างรวดเร็ว โดยมีเป้าหมายเพื่อให้ผู้เรียนมีทักษะที่จำเป็นต่อการทำงานและการพัฒนาตนเองในสังคมที่เปลี่ยนแปลงอย่างต่อเนื่อง
+        </p>
+        <p>
+          ห้องเรียนความเป็นเลิศด้านเทคโนโลยีดิจิทัลได้รับการจัดตั้งขึ้นตามประกาศของโรงเรียนแม่สายประสิทธิ์ศาสตร์เมื่อวันที่ 16 ธันวาคม พ.ศ. 2565 โดยกำหนดให้ใช้หลักสูตรสถานศึกษาพุทธศักราช 2566 ซึ่งอิงตามหลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน พุทธศักราช 2551 (ฉบับปรับปรุง พ.ศ. 2560) เพื่อให้การจัดการศึกษาขั้นพื้นฐานสอดคล้องกับการเปลี่ยนแปลงในด้านเศรษฐกิจ สังคม วัฒนธรรม และสภาพแวดล้อมท้องถิ่น
+        </p>
+        <p>
+          โครงการมุ่งพัฒนาให้ผู้เรียน ซึ่งเป็นกำลังสำคัญของชาติ ได้รับการพัฒนาอย่างสมดุลทั้งในด้านร่างกาย ความรู้ คุณธรรม และจิตสำนึกในความเป็นพลเมืองไทย โดยยึดมั่นในระบอบประชาธิปไตยที่มีพระมหากษัตริย์ทรงเป็นประมุข นอกจากนี้ โครงการยังส่งเสริมทักษะพื้นฐานและเจตคติที่จำเป็นต่อการศึกษาต่อ การประกอบอาชีพ และการเรียนรู้ตลอดชีวิต เพื่อเพิ่มขีดความสามารถในการแข่งขันของประเทศและยกระดับคุณภาพการศึกษาตามมาตรฐานสากลที่ตอบสนองความต้องการในศตวรรษที่ 21
+        </p>
+        <p>
+          และได้เปิดสอนนักเรียนห้องเรียนความเป็นเลิศด้านเทคโนโลยีดิจิทัล ในปีการศึกษา 2566 เป็นรุ่นแรก
+        </p>
+      </div>
+      <div class="about-image" data-aos="fade-left">
+        <img src="DIGITAL TECHNOLOGY EXCELLENCE PROGRAM.png" alt="ภาพตรา DTEP">
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional Courses Section (ถ้าต้องการแสดงหลักสูตรแนะนำ) -->
+  <section class="about-section" data-aos="fade-up">
+    <h2>หลักสูตรแนะนำ</h2>
+    <div class="courses-list">
+      <div class="course-item" data-aos="zoom-in">
+        <h3>พัฒนาระบบฐานข้อมูล</h3>
+        <p>เรียนรู้พื้นฐานและการพัฒนาระบบฐานข้อมูล</p>
+      </div>
+      <div class="course-item" data-aos="zoom-in" data-aos-delay="100">
+        <h3>พื้นฐานการเขียนโปรแกรม</h3>
+        <p>พัฒนาทักษะการเขียนโปรแกรมและสร้างสรรค์ซอฟต์แวร์</p>
+      </div>
+      <div class="course-item" data-aos="zoom-in" data-aos-delay="200">
+        <h3>การเขียนโปรแกรมเพื่อการวิเคราะห์ข้อมูล</h3>
+        <p>ศึกษาวิธีการเขียนโปรแกรมและการวิเคราะห์ข้อมูล</p>
+      </div>
+      <div class="course-item" data-aos="zoom-in" data-aos-delay="300">
+        <h3>โครงงานเพื่อพัฒนาทักษะอาชีพทางเทคโนโลยี</h3>
+        <p>เรียนรู้การสร้างแอปพลิเคชันหรือพัฒนาเว็บไซต์เพื่อการสื่อสารและนำเสนอ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/06/images.png" width="auto" height="50" alt="โลโก้โรงเรียน">
+    <p>© 2025 โรงเรียนแม่สายประสิทธิ์ศาสตร์ | DIGITAL TECHNOLOGY EXCELLENCE PROGRAM (DTEP)</p>
+  </footer>
+
+  <!-- AOS JS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

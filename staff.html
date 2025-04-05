@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แนะนำบุคลากร - DTEP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow-x: hidden;
+    }
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background: rgba(107, 107, 107, 0.8);
+        box-shadow: var(--neon-shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo h1 {
+        color: #28a745;
+        text-shadow: var(--neon-shadow);
+    }
+    /* Navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary-color);
+        text-shadow: var(--neon-shadow);
+    }
+    .staff-section {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .staff-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .staff-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+    .staff-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .staff-card img {
+      width: 100%;
+      height: auto;
+    }
+    .staff-info {
+      padding: 20px;
+    }
+    .staff-info h3 {
+      color: #33CC66;
+    }
+    .staff-info p {
+      font-size: 14px;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #33CC66;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
+    .back-to-top:hover {
+      background: #28a745;
+    }
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="DIGITAL TECHNOLOGY EXCELLENCE PROGRAM.png" alt="โลโก้ DTEP">
+      <h1>DTEP</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับ</a></li>
+        <li><a href="courses.html">หลักสูตร</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="staff.html">แนะนำบุคลากร</a></li>
+        <li><a href="student.html">สำหรับนักเรียน</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Staff Section -->
+  <section class="staff-section">
+    <h2>แนะนำบุคลากร</h2>
+    <div class="staff-container">
+      <!-- ตัวอย่างการ์ดบุคลากร -->
+      <div class="staff-card">
+        <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2216.webp" alt="บุคลากร 2">
+        <div class="staff-info">
+          <h3>ครูธีระวัฒน์ เทพสุภา</h3>
+          <p><strong>ตำแหน่ง : </strong>ครูชำนาญการพิเศษ</p>
+          <p>หัวหน้ากลุ่มสาระวิทยาศาสตร์และเทคโนโลยี 2</p>
+        </div>
+      </div>
+      <div class="staff-card">
+      <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2218-1.webp" alt="บุคลากร 1">
+      <div class="staff-info">
+        <h3>ครูพงศธร สายใจ</h3>
+          <p><strong>ตำแหน่ง : </strong>ครูชำนาญการพิเศษ</p>
+          <p>รองหัวหน้ากลุ่มสาระวิทยาศาสตร์และเทคโนโลยี 2</p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2213.webp" alt="บุคลากร 3">
+        <div class="staff-info">
+          <h3>ครูรัตนา มากสุข</h3>
+          <p><strong>ตำแหน่ง : </strong>ครูชำนาญการพิเศษ</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2211-2.webp" alt="บุคลากร 4">
+        <div class="staff-info">
+          <h3>ครูลดาวัลย์ คำปวน</h3>
+          <p><strong>ตำแหน่ง : </strong>ครูชำนาญการพิเศษ</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2209-3.webp" alt="บุคลากร 4">
+        <div class="staff-info">
+          <h3>ครูชฎาพร ขนทอง</h3>
+          <p><strong>ตำแหน่ง : </strong>ครูชำนาญการพิเศษ</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2175-1.webp" alt="บุคลากร 4">
+        <div class="staff-info">
+          <h3>นางสาวบูรณา วรรณอุต</h3>
+          <p><strong>ตำแหน่ง : </strong>ครู</p>
+          <p></p>
+        </div>
+      </div>
+      <div class="staff-card">
+        <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/03/IMG_2219.webp" alt="บุคลากร 4">
+        <div class="staff-info">
+          <h3>ครูฐิติสันติ์ ปัญญาหล้า</h3>
+          <p><strong>ตำแหน่ง : </strong>ครู</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/06/images.png" width="auto" height="50">
+    <p>© 2025 โรงเรียนแม่สายประสิทธิ์ศาสตร์ | DIGITAL TECHNOLOGY EXCELLENCE PROGRAM (DTEP)</p>
+  </footer>
+  <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+  <script>
+    window.onscroll = function() {
+      document.querySelector(".back-to-top").style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

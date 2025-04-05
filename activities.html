@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>กิจกรรม DTEP - Digital Technology Excellence Program</title>
+  <!-- AOS CSS สำหรับเอฟเฟกต์การเลื่อน -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Lightbox2 CSS สำหรับแกลเลอรีภาพแบบ lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    /* Header Styles */
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background: rgba(107, 107, 107, 0.8);
+        box-shadow: var(--neon-shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo h1 {
+        color: #28a745;
+        text-shadow: var(--neon-shadow);
+    }
+    /* Navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary-color);
+        text-shadow: var(--neon-shadow);
+    }
+    /* Activities Section */
+    .activities-section {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+    .activities-section h2 {
+      text-align: center;
+      color: #33CC66;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <div class="logo">
+      <a href="index.html">
+        <img src="DIGITAL TECHNOLOGY EXCELLENCE PROGRAM.png" alt="โลโก้ DTEP">
+      </a>
+      <h1>DTEP</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับ</a></li>
+        <li><a href="courses.html">หลักสูตร</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="staff.html">แนะนำบุคลากร</a></li>
+        <li><a href="student.html">สำหรับนักเรียน</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Activities Section -->
+  <section class="activities-section" data-aos="fade-up">
+    <h2>กิจกรรมและผลงานของ DTEP</h2>
+    <div class="gallery">
+      <!-- ตัวอย่างแกลเลอรีภาพพร้อม Lightbox -->
+      <div class="gallery-item" data-aos="flip-left">
+        <a href="การอบรมวิศวกรรมพื้นฐานกับการ codeing/001.jpg" data-lightbox="dtep-gallery" data-title="การอบรมวิศวกรรมพื้นฐานกับการ codeing">
+          <img src="การอบรมวิศวกรรมพื้นฐานกับการ codeing/001.jpg" alt="กิจกรรม 1">
+          <div class="caption">การอบรมวิศวกรรมพื้นฐานกับการ codeing</div>
+        </a>
+      </div>
+      <div class="gallery-item" data-aos="flip-right">
+        <img src="อบรมการสร้างสื่อมัลติมีเดีย/LINE_ALBUM_อบรมมัลติมีเดีย 060767_240706_20.jpg" alt="กิจกรรม 2">
+        <div class="caption">อบรมการสร้างสื่อมัลติมีเดีย</div>
+      </div>
+      <!-- เพิ่มกิจกรรมเพิ่มเติมได้ที่นี่ -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/06/images.png" width="auto" height="50" alt="โลโก้โรงเรียน">
+    <p>© 2025 โรงเรียนแม่สายประสิทธิ์ศาสตร์ | DIGITAL TECHNOLOGY EXCELLENCE PROGRAM (DTEP)</p>
+  </footer>
+
+  <!-- AOS JS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Lightbox2 JS สำหรับการแสดงแกลเลอรีภาพแบบ lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

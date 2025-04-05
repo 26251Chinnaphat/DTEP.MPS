@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>โครงสร้างหลักสูตร - DTEP</title>
+  <!-- AOS CSS สำหรับอนิเมชัน -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background: rgba(107, 107, 107, 0.8);
+        box-shadow: var(--neon-shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .logo h1 {
+        color: #28a745;
+        text-shadow: var(--neon-shadow);
+    }
+    /* Navigation */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: var(--primary-color);
+        text-shadow: var(--neon-shadow);
+    }
+    /* Curriculum Section */
+    .curriculum-section {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+    .curriculum-section h2.section-title {
+      text-align: center;
+      color: #33CC66;
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 10px;
+      background: #e9ffe9;
+      border: 1px solid #33CC66;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .curriculum-section h2.section-title:hover {
+      background: #d0f7d0;
+    }
+    .curriculum-table {
+      width: 90%;
+      margin: 0 auto 40px;
+      border-collapse: collapse;
+      display: none;
+    }
+    .curriculum-table th,
+    .curriculum-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    .curriculum-table th {
+      background-color: #33CC66;
+      color: #fff;
+    }
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .curriculum-table {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <div class="logo">
+      <a href="index.html">
+        <img src="DIGITAL TECHNOLOGY EXCELLENCE PROGRAM.png" alt="โลโก้ DTEP">
+      </a>
+      <h1>DTEP</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับ</a></li>
+        <li><a href="courses.html">หลักสูตร</a></li>
+        <li><a href="activities.html">กิจกรรม</a></li>
+        <li><a href="staff.html">แนะนำบุคลากร</a></li>
+        <li><a href="student.html">สำหรับนักเรียน</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Curriculum Section -->
+  <section class="curriculum-section">
+    <!-- Curriculum for Grade 4 -->
+    <h2 class="section-title" data-aos="fade-up">โครงสร้างหลักสูตรชั้นมัธยมศึกษาปีที่ 4</h2>
+    <table class="curriculum-table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th>รหัสวิชา</th>
+          <th>รายวิชา</th>
+          <th>หน่วยกิต</th>
+          <th>ชั้นปีที่เรียน</th>
+          <th>ภาคเรียนที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ค31201</td>
+          <td>คณิตศาสตร์เพิ่มเติม 1</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว31271</td>
+          <td>การประยุกต์ใช้โปรแกรมสำเร็จรูป</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว31273</td>
+          <td>โปรแกรมสำเร็จรูปทางสถิติ</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว31275</td>
+          <td>กราฟิกเบื้องต้น</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ค31202</td>
+          <td>คณิตศาสตร์เพิ่มเติม 2</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว31272</td>
+          <td>พื้นฐานการเขียนโปรแกรม</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว31274</td>
+          <td>พัฒนาระบบฐานข้อมูล</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว31276</td>
+          <td>การสร้างภาพโมเดล 3 มิติ</td>
+          <td>1.5</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Curriculum for Grade 5 -->
+    <h2 class="section-title" data-aos="fade-up">โครงสร้างหลักสูตรชั้นมัธยมศึกษาปีที่ 5</h2>
+    <table class="curriculum-table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th>รหัสวิชา</th>
+          <th>รายวิชา</th>
+          <th>หน่วยกิต</th>
+          <th>ชั้นปีที่เรียน</th>
+          <th>ภาคเรียนที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ค32201</td>
+          <td>คณิตศาสตร์เพิ่มเติม 3</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว32271</td>
+          <td>การเขียนโปรแกรมเพื่อการวิเคราะห์ข้อมูล</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว32273</td>
+          <td>เกมสร้างสรรค์</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว32275</td>
+          <td>มัลติมีเดีย</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ค32202</td>
+          <td>คณิตศาสตร์เพิ่มเติม 4</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว32272</td>
+          <td>การเขียนโปรแกรมเชิงวัตถุ</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว32274</td>
+          <td>การเขียนโปรแกรมบนเว็บ</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว32276</td>
+          <td>เทคโนโลยีในยุคปัจจุบัน</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Curriculum for Grade 6 -->
+    <h2 class="section-title" data-aos="fade-up">โครงสร้างหลักสูตรชั้นมัธยมศึกษาปีที่ 6</h2>
+    <table class="curriculum-table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th>รหัสวิชา</th>
+          <th>รายวิชา</th>
+          <th>หน่วยกิต</th>
+          <th>ชั้นปีที่เรียน</th>
+          <th>ภาคเรียนที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ค33201</td>
+          <td>คณิตศาสตร์เพิ่มเติม5</td>
+          <td>1.5</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33271</td>
+          <td>โครงงานเพื่อพัฒนาทักษะอาชีพทางเทคโนโลยี 1</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33273</td>
+          <td>เทคโนโลยีการสร้างภาพเคลื่อนไหว</td>
+          <td>1.5</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33275</td>
+          <td>การค้าในโลกออนไลน์</td>
+          <td>1.5</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33277</td>
+          <td>เทคโนโลยีสื่อผสม</td>
+          <td>1.5</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ค33202</td>
+          <td>คณิตศาสตร์เพิ่มเติม 6</td>
+          <td>1.5</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว33272</td>
+          <td>โครงงานเพื่อพัฒนาทักษะอาชีพทางเทคโนโลยี 2</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Old Curriculum Sections -->
+    <h2 class="section-title" data-aos="fade-up">หลักสูตรเดิม ชั้นมัธยมศึกษาปีที่ 4</h2>
+    <table class="curriculum-table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th>รหัสวิชา</th>
+          <th>รายวิชา</th>
+          <th>หน่วยกิต</th>
+          <th>ชั้นปีที่เรียน</th>
+          <th>ภาคเรียนที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ว31271</td>
+          <td>การประยุกต์ใช้โปรแกรมสำเร็จรูป</td>
+          <td>2.0</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว31273</td>
+          <td>โปรแกรมสำเร็จรูปทางสถิติ</td>
+          <td>2.0</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว31275</td>
+          <td>กราฟิกเบื้องต้น</td>
+          <td>2.0</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว31272</td>
+          <td>พื้นฐานการเขียนโปรแกรม</td>
+          <td>2.0</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว31274</td>
+          <td>พัฒนาระบบฐานข้อมูล</td>
+          <td>2.0</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว31276</td>
+          <td>การสร้างภาพโมเดล 3 มิติ</td>
+          <td>2.0</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title" data-aos="fade-up">หลักสูตรเดิม ชั้นมัธยมศึกษาปีที่ 5</h2>
+    <table class="curriculum-table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th>รหัสวิชา</th>
+          <th>รายวิชา</th>
+          <th>หน่วยกิต</th>
+          <th>ชั้นปีที่เรียน</th>
+          <th>ภาคเรียนที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ว32271</td>
+          <td>การเขียนโปรแกรมเพื่อการวิเคราะห์ข้อมูล</td>
+          <td>2.0</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว32273</td>
+          <td>เกมสร้างสรรค์</td>
+          <td>2.0</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว32275</td>
+          <td>มัลติมีเดีย</td>
+          <td>2.0</td>
+          <td>2</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว32272</td>
+          <td>การเขียนโปรแกรมเชิงวัตถุ</td>
+          <td>2.0</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว32274</td>
+          <td>การเขียนโปรแกรมบนเว็บ</td>
+          <td>2.0</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ว32276</td>
+          <td>เทคโนโลยีในยุคปัจจุบัน</td>
+          <td>2.0</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title" data-aos="fade-up">หลักสูตรเดิม ชั้นมัธยมศึกษาปีที่ 6</h2>
+    <table class="curriculum-table" data-aos="fade-up">
+      <thead>
+        <tr>
+          <th>รหัสวิชา</th>
+          <th>รายวิชา</th>
+          <th>หน่วยกิต</th>
+          <th>ชั้นปีที่เรียน</th>
+          <th>ภาคเรียนที่</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ว33271</td>
+          <td>โครงงานเพื่อพัฒนาทักษะอาชีพทางเทคโนโลยี 1</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33273</td>
+          <td>เทคโนโลยีการสร้างภาพเคลื่อนไหว</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33275</td>
+          <td>การค้าในโลกออนไลน์</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33277</td>
+          <td>เทคโนโลยีสื่อผสม</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ว33272</td>
+          <td>โครงงานเพื่อพัฒนาทักษะอาชีพทางเทคโนโลยี 2</td>
+          <td>2.0</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <img src="https://www.maesai.ac.th/web/wp-content/uploads/2024/06/images.png" width="auto" height="50" alt="โลโก้โรงเรียน">
+    <p>© 2025 โรงเรียนแม่สายประสิทธิ์ศาสตร์ | DIGITAL TECHNOLOGY EXCELLENCE PROGRAM (DTEP)</p>
+  </footer>
+
+  <!-- JavaScript สำหรับ AOS และการจัดการ collapsible panels -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // ทำให้แต่ละหัวข้อหลักสูตรเป็น collapsible panel
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach(title => {
+      title.addEventListener('click', () => {
+        // ค้นหา table ถัดไป
+        const table = title.nextElementSibling;
+        if (table.style.display === 'none' || table.style.display === '') {
+          table.style.display = 'table';
+        } else {
+          table.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
