@@ -1170,3 +1170,273 @@ footer {
         font-size: 1.5rem;
     }
 }
+
+/* --- สไตล์สำหรับหน้า Courses --- */
+.course-hero {
+    padding: 80px 5%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(77, 171, 247, 0.1), rgba(51, 154, 240, 0.1));
+}
+
+.course-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.course-hero h1 {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-hero p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.goal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 193, 7, 0.2));
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.goal-badge i {
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+.goal-badge span {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* --- Course Modules Section --- */
+.course-modules {
+    padding: 80px 5%;
+}
+
+.modules-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.module-card {
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.module-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
+    border-radius: 50%;
+}
+
+.module-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.module-card p {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.module-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.skill-tag {
+    background: rgba(77, 171, 247, 0.1);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(77, 171, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- Course Benefits Section --- */
+.course-benefits {
+    padding: 80px 5%;
+    background: linear-gradient(135deg, rgba(116, 192, 252, 0.05), rgba(51, 154, 240, 0.05));
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.benefit-item {
+    padding: 40px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.benefit-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Course Call to Action --- */
+.course-cta {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.cta-content h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.cta-content p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --- Responsive Design สำหรับหน้า Courses --- */
+@media (max-width: 768px) {
+    .course-hero {
+        padding: 60px 5%;
+    }
+    
+    .course-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .course-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .goal-badge {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .modules-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .module-card {
+        padding: 30px 20px;
+    }
+    
+    .benefits-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .course-hero-content {
+        padding: 30px 20px;
+    }
+    
+    .cta-content {
+        padding: 30px 20px;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
